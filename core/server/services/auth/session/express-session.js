@@ -12,7 +12,7 @@ const expressSessionMiddleware = session({
     secret: settingsCache.get('session_secret'),
     resave: false,
     saveUninitialized: false,
-    name: 'ghost-admin-api-session',
+    name: config.get('authCookieName'),
     cookie: {
         maxAge: constants.SIX_MONTH_MS,
         httpOnly: true,

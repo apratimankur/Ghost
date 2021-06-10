@@ -1,3 +1,17 @@
 {
-    "enableDeveloperExperiments": true
+    "enableDeveloperExperiments": true,
+    "mail": {
+        "from": "'FootLoose Labs Team' <team@footloose.io>",
+        "transport": "SMTP",
+        "options": {
+            "host": "smtp.gmail.com",
+            "service": "Gmail",
+            "port": "465",
+            "secure": true,
+            "auth": {
+                "user": "team@footloose.io",
+                "pass": "wldnsbglhbktwjkd"
+            }
+        }
+    }
 }

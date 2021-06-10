@@ -115,7 +115,8 @@ module.exports = {
                 user: {
                     name: frame.user.get('name'),
                     email: frame.user.get('email')
-                }
+                },
+                RoleModel: models.Role
             });
         }
     }

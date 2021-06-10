@@ -9,7 +9,7 @@ class Invites {
         this.urlUtils = urlUtils;
     }
 
-    add({api, InviteModel, invites, options, user}) {
+    add({api, InviteModel, invites, options, user, RoleModel}) {
         let invite;
         let emailData;
 
@@ -24,19 +24,31 @@ class Invites {
             .then(() => {
                 return InviteModel.add(invites[0], options);
             })
-            .then((createdInvite) => {
+            .then(async (createdInvite) => {
                 invite = createdInvite;
 
                 const adminUrl = this.urlUtils.urlFor('admin', true);
+                let invitedForRole;
+                try{
+                    invitedForRole = await RoleModel.findOne({id: invite.get("role_id")});
+                }catch(e){
+                    throw e;
+                }
+
+                console.debug("DEBUG: ", "invitedForRole = ", invitedForRole);
 
                 emailData = {
                     blogName: this.settingsCache.get('title'),
                     invitedByName: user.name,
                     invitedByEmail: user.email,
+                    invitedForRole: invitedForRole.get("name"),
                     resetLink: this.urlUtils.urlJoin(adminUrl, 'signup', security.url.encodeBase64(invite.get('token')), '/'),
                     recipientEmail: invite.get('email')
                 };
 
+                return emailData;  
+            })
+            .then((emailData) => {
                 return this.mailService.utils.generateContent({data: emailData, template: 'invite-user'});
             })
             .then((emailContent) => {

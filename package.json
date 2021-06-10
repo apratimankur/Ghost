@@ -12,6 +12,9 @@
     "content",
     "markdown"
   ],
+  "config": {
+
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/TryGhost/Ghost.git"

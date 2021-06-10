@@ -4,6 +4,7 @@ const path = require('path');
 const htmlToText = require('html-to-text');
 const urlUtils = require('../../../shared/url-utils');
 const settingsCache = require('../settings/cache');
+const config = require('../../../shared/config');
 const templatesDir = path.resolve(__dirname, '..', 'mail', 'templates');
 
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
@@ -11,7 +12,8 @@ _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
 exports.generateContent = function generateContent(options) {
     const defaults = {
         siteUrl: urlUtils.urlFor('home', true),
-        siteTitle: settingsCache.get('title')
+        siteTitle: settingsCache.get('title'),
+        mailConfig: config.get("mailConfig")
     };
 
     const data = _.defaults(defaults, options.data);
