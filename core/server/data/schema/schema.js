@@ -23,6 +23,11 @@ module.exports = {
         status: {type: 'string', maxlength: 50, nullable: false, defaultTo: 'draft'},
         // NOTE: unused at the moment and reserved for future features
         locale: {type: 'string', maxlength: 6, nullable: true},
+
+        label: {type: 'string', maxlength: 191, nullable: true},
+        taxon: {type: 'string', maxlength: 1000, nullable: true},
+        used_in: {type: 'string', maxlength: 1000, nullable: true},
+
         visibility: {
             type: 'string',
             maxlength: 50,

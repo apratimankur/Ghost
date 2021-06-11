@@ -12,9 +12,7 @@
     "content",
     "markdown"
   ],
-  "config": {
-
-  },
+  "config": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/TryGhost/Ghost.git"
@@ -25,6 +23,8 @@
   "scripts": {
     "start": "node index",
     "dev": "DEBUG=ghost:* grunt dev",
+    "build": "DEBUG=ghost:* grunt build",
+    "prod": "DEBUG=ghost:* grunt prod",
     "test": "grunt validate",
     "ci": "grunt validate --verbose",
     "ci:regression": "grunt test-regression --verbose",
@@ -46,7 +46,7 @@
     "@nexes/nql": "0.5.2",
     "@sentry/node": "6.5.1",
     "@tryghost/adapter-manager": "0.2.12",
-    "@tryghost/admin-api-schema": "2.2.2",
+    "@tryghost/admin-api-schema": "git+https://github.com/apratimankur/ghost-admin-api-schema",
     "@tryghost/bootstrap-socket": "0.2.8",
     "@tryghost/constants": "0.1.7",
     "@tryghost/email-analytics-provider-mailgun": "1.0.0",

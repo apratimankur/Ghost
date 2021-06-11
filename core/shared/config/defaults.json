@@ -1,8 +1,12 @@
 {
     "url": "http://localhost:2368",
+    "brand": {
+        "logo": ""
+    },
     "authCookieName": "flpl-blog-admin-api-session",
     "mailConfig": {
-        "htmlTitle": "Welcome To Flabs Blog"
+        "htmlTitle": "Welcome To Flabs Blog",
+        "blogUrl": "https://www.greaterindia.org"
     },
     "server": {
         "host": "127.0.0.1",

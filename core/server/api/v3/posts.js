@@ -4,7 +4,7 @@ const errors = require('@tryghost/errors');
 const urlUtils = require('../../../shared/url-utils');
 const {mega} = require('../../services/mega');
 const {BadRequestError} = require('@tryghost/errors');
-const allowedIncludes = ['tags', 'authors', 'authors.roles', 'email'];
+const allowedIncludes = ['tags', 'authors', 'authors.roles', 'email', 'label', 'taxon', 'usedIn'];
 const unsafeAttrs = ['status', 'authors', 'visibility'];
 
 module.exports = {

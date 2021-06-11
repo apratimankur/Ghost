@@ -39,6 +39,7 @@ class Invites {
 
                 emailData = {
                     blogName: this.settingsCache.get('title'),
+                    blogDescription: this.settingsCache.get('description'),
                     invitedByName: user.name,
                     invitedByEmail: user.email,
                     invitedForRole: invitedForRole.get("name"),
