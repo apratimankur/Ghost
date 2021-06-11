@@ -1,6 +1,6 @@
 [submodule "content/themes/casper"]
 	path = content/themes/casper
-	url = ../../TryGhost/Casper.git
+	url = https://github.com/apratimankur/ghost-casper-theme-mod
 [submodule "core/client"]
 	path = core/client
-	url = ../../TryGhost/Admin.git
+	url = https://github.com/apratimankur/ghost-admin-client
