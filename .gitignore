@@ -127,3 +127,8 @@ test/coverage
 
 # Caddyfile - for local development with ssl + caddy
 Caddyfile
+
+
+
+
+_dist
