@@ -2,7 +2,7 @@ const models = require('../../models');
 const i18n = require('../../../shared/i18n');
 const errors = require('@tryghost/errors');
 const urlUtils = require('../../../shared/url-utils');
-const ALLOWED_INCLUDES = ['tags', 'authors', 'authors.roles'];
+const ALLOWED_INCLUDES = ['tags', 'authors', 'authors.roles', 'label', 'taxon', 'usedIn'];
 const UNSAFE_ATTRS = ['status', 'authors', 'visibility'];
 
 module.exports = {
