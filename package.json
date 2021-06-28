@@ -23,7 +23,7 @@
   "contributors": "https://github.com/TryGhost/Ghost/graphs/contributors",
   "license": "MIT",
   "scripts": {
-    "start": "node index",
+    "start": "pm2 start index.js --name $npm_package_name",
     "dev": "DEBUG=ghost:* grunt dev",
     "build": "DEBUG=ghost:* grunt build",
     "prod": "DEBUG=ghost:* grunt prod",
