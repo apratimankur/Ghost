@@ -833,20 +833,6 @@ figure blockquote p {
     }
 }
 
-
-${ templateSettings.showBadge ? `
-.footer-powered {
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 40px;
-}
-
-.gh-powered {
-    width: 142px;
-    height: 30px;
-}
-` : ''}
-
 /* ----- ENDIF THE BROWSER ----- */
 
 </style>
@@ -937,12 +923,6 @@ ${ templateSettings.showBadge ? `
                                     <tr>
                                         <td class="footer">${site.title} &copy; ${date.getFullYear()} – <a href="%recipient.unsubscribe_url%">Unsubscribe</a></td>
                                     </tr>
-
-                                    ${ templateSettings.showBadge ? `
-                                    <tr>
-                                        <td class="footer-powered"><a href="https://ghost.org/"><img src="https://static.ghost.org/v4.0.0/images/powered.png" border="0" width="142" height="30" class="gh-powered" alt="Publish with Ghost"></a></td>
-                                    </tr>
-                                    ` : '' }
                                 </table>
                             </td>
                         </tr>
